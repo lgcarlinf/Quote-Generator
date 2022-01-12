@@ -1,0 +1,35 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+
+}
+
+.box-quote{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 50px;
+  width: 60%;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.box-quote p{
+  width: 90%;
+  text-align: right;
+}
+
+.box-quote input{
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
