@@ -1,35 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;800&display=swap");
 .App {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 100%;
-
+  width: 100vw;
+  background-color: #202632;
+  font-family: "Manrope", sans-serif;
 }
 
-.box-quote{
-  background-color: white;
+.box-quote {
+  min-width: 250px;
+  width: 30%;
+  position: relative;
+  background-color: #313a49;
+  color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: auto;
-  padding: 50px;
-  width: 60%;
+  padding: 30px;
+  padding-bottom: 60px;
   text-align: center;
   border-radius: 10px;
+  margin-bottom: 50px;
 }
 
-.box-quote p{
+.box-quote p {
+  letter-spacing: 5px;
   width: 90%;
-  text-align: right;
+  text-align: center;
+  color: hsl(150, 100%, 66%);
+  font-size: 12px;
+  font-weight: 800;
 }
 
-.box-quote input{
-  color: white;
+.box-quote h1 {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.button {
+  position: absolute;
+  padding: 16px;
   border: none;
-  padding: 15px;
-  border-radius: 5px;
+  border-radius: 50%;
+  background-color: #52ffa8;
+  bottom: -25px;
   cursor: pointer;
+}
+
+.button:hover {
+  background: #52ffa8;
+  box-shadow: 0 0 10px #52ffa8, 0 0 40px #52ffa8, 0 0 80px #52ffa8;
+}
+
+.dice {
+  height: 20px;
+  background-color: hsl(150, 100%, 66%);
+}
+
+.pattern {
+  display: block;
+  width: 95%;
 }
