@@ -52,7 +52,7 @@
 
 .button {
   position: absolute;
-  padding: 16px;
+  padding: 16px 17px;
   border: none;
   border-radius: 50%;
   background-color: #52ffa8;

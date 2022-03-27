@@ -1,47 +1,49 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import dice from "./assets/icon-dice.svg";
+import axios from "axios";
 import pattern from "./assets/pattern-divider-desktop.svg";
 
 function App() {
-  const [advice, setAdvice] = useState("");
-  const [id, setId] = useState("");
+  const [data, setData] = useState({});
+  /*  const [advice, setAdvice] = useState("");
+  const [id, setId] = useState(""); */
+
+  const getAdvice = async () => {
+    try {
+      let rand = Math.floor(Math.random() * 220);
+      const res = await axios.get(`https://api.adviceslip.com/advice/${rand}`);
+      setData(res.data.slip);
+      console.log(rand);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   useEffect(() => {
-    fetch("https://api.adviceslip.com/advice")
-      .then((res) => res.json())
-      .then((data) => {
-        setAdvice(data.slip.advice);
-        setId(data.slip.id);
-      });
+    getAdvice();
   }, []);
-
-  const getAdvice = () => {
-    fetch("https://api.adviceslip.com/advice")
-      .then((res) => res.json())
-      .then((data) => {
-        setAdvice(data.slip.advice);
-        setId(data.slip.id);
-      });
-  };
 
   return (
     <>
       <div className="App">
-        <div className="box-quote">
-          <p> ADVICE #{id}</p>
-          <h1>{advice}</h1>
-          <img className="pattern" src={pattern} alt="" />
-
-          <button
-            type="button"
-            aria-label="new quote"
-            className="button"
-            onClick={getAdvice}
-          >
-            <img className="dice" src={dice} alt="" />
-          </button>
-        </div>
+        {data !== {} ? (
+          <div className="box-quote">
+            <p> ADVICE #{data.id}</p>
+            <h1>{data.advice}</h1>
+            <img className="pattern" src={pattern} alt="" />
+            <button
+              type="button"
+              aria-label="new quote"
+              className="button"
+              onClick={getAdvice}
+            >
+              <img className="dice" src={dice} alt="" />
+            </button>
+          </div>
+        ) : (
+          <h2>Loading...</h2>
+        )}
       </div>
     </>
   );
