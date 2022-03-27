@@ -24,7 +24,7 @@ function App() {
   return (
     <>
       <div className="App">
-        {data !== {} ? (
+        {data != {} ? (
           <div className="box-quote">
             <p> ADVICE #{data.id}</p>
             <h1>{data.advice}</h1>
