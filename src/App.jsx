@@ -6,9 +6,6 @@ import pattern from "./assets/pattern-divider-desktop.svg";
 
 function App() {
   const [data, setData] = useState({});
-  /*  const [advice, setAdvice] = useState("");
-  const [id, setId] = useState(""); */
-
   const getAdvice = async () => {
     try {
       let rand = Math.floor(Math.random() * 220);
