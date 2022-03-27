@@ -33,12 +33,7 @@ function App() {
           <h1>{advice}</h1>
           <img className="pattern" src={pattern} alt="" />
 
-          <button
-            type="button"
-            value="New Quote"
-            className="button"
-            onClick={getAdvice}
-          >
+          <button type="button" className="button" onClick={getAdvice}>
             <img className="dice" src={dice} alt="" />
           </button>
         </div>
