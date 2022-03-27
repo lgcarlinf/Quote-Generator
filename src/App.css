@@ -12,7 +12,7 @@
 
 .box-quote {
   min-width: 250px;
-  width: 30%;
+  width: 35%;
   position: relative;
   background-color: #313a49;
   color: #fff;
@@ -26,6 +26,14 @@
   text-align: center;
   border-radius: 10px;
   margin-bottom: 50px;
+}
+@media (max-width: 500px) {
+  .app {
+    width: 100%;
+  }
+  .box-quote {
+    width: 80%;
+  }
 }
 
 .box-quote p {
