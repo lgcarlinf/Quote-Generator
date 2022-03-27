@@ -2,4 +2,4 @@
 
 -Link:
 [Quote-Generator](https://quotes-g.netlify.app/)
-![](src/preview.png)
+![](src/previe.png)
